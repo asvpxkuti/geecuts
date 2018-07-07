@@ -1,0 +1,3 @@
+{
+    "terminal.integrated.shellArgs.windows": ["/K", "C:\\cmder_mini\\vscode.bat"],
+}
