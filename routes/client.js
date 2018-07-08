@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Client = require('../models/Clients');
-var nodemailer = require('nodemailer');
+//var nodemailer = require('nodemailer');
 
 function handleError(res, reason, message, code) {
   console.log("ERROR: " + reason);
@@ -53,7 +53,7 @@ router.delete('/:id', function(req, res, next) {
 
 
 
-router.post('/sendmail', function(req, res) {
+/* router.post('/sendmail', function(req, res) {
   
   console.log('loading request body '+ JSON.stringify(req.body));
   console.log('request data '+ req.body.email);
@@ -98,6 +98,6 @@ router.post('/sendmail', function(req, res) {
     });
   });
   
-});
+}); */
 
 module.exports = router;
