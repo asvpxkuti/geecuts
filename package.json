@@ -1,23 +1,17 @@
 {
   "name": "geecuts-ser",
   "version": "1.0.0",
-  "description": "hair company",
+  "description": "Geecuts",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index"
   },
   "dependencies": {
-    "bluebird": "^3.5.1",
-    "body-parser": "^1.18.2",
-    "cookie-parser": "^1.4.3",
-    "core-js": "^2.4.1",
-    "cors": "^2.8.4",
-    "express": "^4.16.2",
-    "file-system": "^2.2.2",
+    "express": "4.16.2",
     "mongoose": "4.13.6",
-    "morgan": "^1.9.0",
-    "multer": "^1.3.0",
-    "nodemailer": "^4.6.5"
+    "bcryptjs": "2.4.3",
+    "cors": "2.8.4",
+    "body-parser": "1.18.2"
   },
   "author": "",
   "license": "MIT",
