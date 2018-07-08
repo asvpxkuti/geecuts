@@ -48,5 +48,5 @@ app.get('*', (req, res) => {
 
 // Start Server
 app.listen(port, () => {
-  console.log(`Express server listening on port in mode ${port}`);
+  console.log('Server started on port '+port);
 });
