@@ -532,7 +532,7 @@ if(false) {}
 
 /***/ }),
 
-/***/ 3:
+/***/ 2:
 /*!******************************!*\
   !*** multi ./src/styles.css ***!
   \******************************/
@@ -544,5 +544,5 @@ module.exports = __webpack_require__(/*! C:\Projects\angular projects-frontend\g
 
 /***/ })
 
-},[[3,"runtime"]]]);
+},[[2,"runtime"]]]);
 //# sourceMappingURL=styles.js.map
