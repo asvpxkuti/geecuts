@@ -1,20 +1,24 @@
 {
-  "name": "geecuts",
+  "name": "geecuts-ser",
   "version": "1.0.0",
-  "description": "MEAN stack authentication app",
+  "description": "Geecuts",
   "main": "index.js",
   "scripts": {
     "start": "node index"
   },
   "dependencies": {
-    "express": "4.16.2",
-    "mongoose": "4.13.6",
+    "bcrypt": "^3.0.0",
     "bcryptjs": "2.4.3",
-    "cors": "2.8.4",
-    "jsonwebtoken": "8.1.0",
     "body-parser": "1.18.2",
-    "passport": "0.4.0",
-    "passport-jwt": "3.0.1"
+    "cors": "2.8.4",
+    "express": "4.16.2",
+    "express-session": "^1.15.6",
+    "jsonwebtoken": "^8.3.0",
+    "mongoose": "4.13.6",
+    "nodemailer": "^4.6.5",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "passport-local-mongoose": "^5.0.1"
   },
   "author": "",
   "license": "MIT",
