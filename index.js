@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
-const config = require('./config/database');
+const config = require('./config/index');
 
 // Connect To Database (NEW) But not working!!!!!!!!!! (because of secret in db.js!!!!!)
 //const db = require('./config/database');
@@ -31,7 +31,7 @@ mongoose.connection.on('error', (err) => {
 
 const app = express();
 
-const users = require('./routes/users');
+const users = require('./routes/client_route');
 
 // Port Number
 const port = process.env.PORT || 8080;
@@ -51,7 +51,7 @@ app.use(passport.session());
 
 require('./config/passport')(passport);
 
-app.use('/users', users);
+app.use('/client', users);
 
 // Index Routes
 app.get('/', (req, res) => {
