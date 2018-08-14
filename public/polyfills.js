@@ -5466,7 +5466,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!********************************!*\
   !*** multi ./src/polyfills.ts ***!
   \********************************/
@@ -5478,5 +5478,5 @@ module.exports = __webpack_require__(/*! C:\Projects\angular projects-frontend\g
 
 /***/ })
 
-},[[1,"runtime"]]]);
+},[[2,"runtime"]]]);
 //# sourceMappingURL=polyfills.js.map
