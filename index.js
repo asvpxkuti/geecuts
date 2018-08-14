@@ -53,7 +53,7 @@ require('./config/passport')(passport);
 
 app.use('/users', users);
 
-// Index Route
+// Index Routes
 app.get('/', (req, res) => {
   res.send('invaild endpoint');
 });
