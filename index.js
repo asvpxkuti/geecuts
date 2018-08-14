@@ -2,12 +2,17 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const passport = require('passport');
 const mongoose = require('mongoose');
+const config = require('./config/index');
 mongoose.Promise = require('bluebird');
 
+const app = express();
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 // Connect To Database (OLD CODE)
-mongoose.connect('mongodb://kwasidb:kwasidb23@ds125881.mlab.com:25881/geecuts1',{ useNewUrlParser: true });
+mongoose.connect(config.database,{ useNewUrlParser: true });
 // On Connection
 mongoose.connection.on('connected', () => {
   console.log('Connected to Database ');
@@ -17,9 +22,10 @@ mongoose.connection.on('error', (err) => {
   console.log('Database error '+err);
 });
 
-const app = express();
 
-const client = require('./routes/client');
+
+const client = require('./routes/client_route');
+const user = require('./routes/user_route');
 
 // Port Number
 const port = process.env.PORT || 5000;
@@ -36,7 +42,7 @@ app.use(bodyParser.urlencoded({'extended':false}));
 // Passport Middleware
 
 app.use('/client', client);
-
+app.use('/user', user);
 // Index Route
 app.get('/', (req, res) => {
   res.send('invaild endpoint');
