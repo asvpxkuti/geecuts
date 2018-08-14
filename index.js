@@ -5,11 +5,10 @@ const cors = require('cors');
 const passport = require('passport');
 const mongoose = require('mongoose');
 const config = require('./config/index');
+
 mongoose.Promise = require('bluebird');
 
-const app = express();
-app.use(passport.initialize());
-require('./config/passport')(passport);
+
 
 // Connect To Database (OLD CODE)
 mongoose.connect(config.database,{ useNewUrlParser: true });
@@ -40,6 +39,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({'extended':false}));
 // Passport Middleware
+const app = express();
+app.use(passport.initialize());
+require('./config/passport')(passport);
 
 app.use('/client', client);
 app.use('/user', user);
@@ -54,5 +56,5 @@ app.get('*', (req, res) => {
 
 // Start Server
 app.listen(port, () => {
-  console.log('Server started on port '+port);
+  console.log('Servers started on port '+port);
 });
